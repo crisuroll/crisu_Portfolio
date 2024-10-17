@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+
+</head>
+
+<body class="bg-pink-300">
+
+    <!-- HEADER -->
+    <div class="mx-auto px-4 py-8 container">
+        <header class="justify-center grid mb-8">
+            <nav class="justify-items-center gap-4 grid grid-cols-2 md:grid-cols-4 mb-8">
+                <a class="hover:text-white">Sobre mí</a>
+                <a class="hover:text-white">Proyectos</a>
+                <a class="hover:text-white">Habilidades</a>
+                <a class="hover:text-white">Contacto</a>
+            </nav>
+        </header>
+
+        <main>
+            <!--CÓDIGO PARA LA TARJETA DESLIZANTE-->
+            <div class="flex justify-center items-center">
+                <div class="relative w-72 h-96 hover:-translate-x-56 duration-500 group">
+                    <div class="relative z-[2] bg-[linear-gradient(transparent_80%,_#000),_var(--i)] bg-cover bg-center shadow-lg rounded-2xl w-full h-full"
+                        style="--i:url(../../img/img.jpg)">
+                        <h6 class="bottom-10 left-10 absolute text-lg text-white">Crisuroll</h6>
+                    </div>
+                    <div
+                        class="group-hover:w-[150%] top-0 right-0 bottom-0 left-0 z-[1] absolute bg-white shadow-lg m-auto p-4 rounded-r-lg w-[90%] h-[90%] group-hover:translate-x-72 duration-500">
+                        <div class="p-1 border-b-[#bc8811]">
+                            <p class="font-bold text-[#bc8811] text-xl">Crisu</p>
+                            <div class="flex gap-2">
+                                <div class="flex items-center gap-1">
+                                    <i class="fa-clock fa-regular"></i>
+                                    <p>Software developer</p>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <i class="fa-regular fa-user"></i>
+                                    <p>;3</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-4">
+                            <p class="font-bold text-[#bc8811] text-xl">Aquí meter una descripción mía</p>
+                        </div>
+
+                        <div>
+                            <a href="#" class="block bg-[#bc8811] mt-2 p-2 w-24 text-center text-white">Let's get
+                                started!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--FIN DEL CÓDIGO PARA LA TARJETA DESLIZANTE-->
+        </main>
+
+
+
+    </div>
+
+</body>
+
+</html>
