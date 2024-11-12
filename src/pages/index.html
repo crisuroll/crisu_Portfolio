@@ -65,14 +65,14 @@
     <!-- HEADER -->
     <header class="flex justify-center">
         <!-- Botón del menú -->
-        <div class="top-5 left-5 z-50 fixed bg-gray-800 hover:bg-gray-900 px-3 py-2 rounded-full text-white cursor-pointer"
+        <div class="top-5 left-5 z-50 fixed bg-gray-800 hover:bg-gray-900 px-3 py-2 rounded-full cursor-pointer"
             onclick="toggleMenu()">
             &#9776; <!-- Icono del menú -->
         </div>
 
         <!-- Barra lateral -->
         <nav id="sidebar"
-            class="top-5 left-8 z-40 fixed gap-2 grid grid-cols-4 bg-gray-800 shadow-lg py-2 rounded-full w-0 text-white transition-all duration-500 overflow-x-hidden ease-in-out">
+            class="top-5 left-8 z-40 fixed gap-2 grid grid-cols-4 bg-gray-800 shadow-lg py-2 rounded-full w-0 transition-all duration-500 overflow-x-hidden ease-in-out">
 
             <div class="block text-lg">
                 <a href="#aboutme" class="flex flex-col items-center text-[#ffa3dc] hover:text-[#ff8ad2]">
@@ -106,7 +106,7 @@
     <main>
         <!-- ABOUT ME: FLIPCARD (MÓVIL), DESLIZANTE(MD Y MÁS) -->
 
-        <section id="aboutme" class="flex mt-20 justify-center items-center mb-8 py-4 border border-black">
+        <section id="aboutme" class="flex justify-center items-center mt-20 mb-8 py-4 border border-black">
             <div
                 class="relative w-72 h-96 md:hover:-translate-x-56 duration-1000 md:duration-700 group [perspective:1000px]">
                 <div
@@ -151,7 +151,7 @@
 
         <section id="projects" class="mb-8 py-4 border border-black">
             <h1 class="text-2xl text-bold text-center">Projects</h1>
-            <div class="gap-4 grid grid-cols-1 md:grid-cols-2 px-20 ">
+            <div class="gap-4 grid grid-cols-1 md:grid-cols-2 px-20">
                 <!-- VIRTUAL MACHINE -->
                 <div class="border border-black">
                     <h1>Virtual Machine</h1>
@@ -165,9 +165,9 @@
                         voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                         cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
-                    <div class="flex justify-center space-x-2 gap-20">
+                    <div class="flex justify-center gap-20 space-x-2">
                         <button type="button"
-                            class="text-gray-900 bg-gradient-to-r from-pink-200 via-pink-300 to-cyan-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-3xl text-sm px-5 py-2.5 inline-flex items-center">
+                            class="inline-flex items-center bg-gradient-to-r hover:bg-gradient-to-bl from-pink-200 via-pink-300 to-cyan-200 px-5 py-2.5 rounded-3xl focus:ring-4 focus:ring-red-100 dark:focus:ring-red-400 font-medium text-gray-900 focus:outline-none text-sm">
                             <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                 fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd"
@@ -175,16 +175,6 @@
                                     clip-rule="evenodd" />
                             </svg>
                             Go to repo
-                        </button>
-                        <button type="button"
-                            class="text-gray-900 bg-gradient-to-r from-pink-200 via-pink-300 to-cyan-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-3xl text-sm px-5 py-2.5 inline-flex items-center">
-                            More...
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="w-4 h-4 ml-2">
-                                <!-- Cambia w-6 h-6 a w-4 h-4 -->
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                            </svg>
                         </button>
                     </div>
                 </div>
@@ -201,9 +191,9 @@
                         voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                         cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
-                    <div class="flex justify-center space-x-2 gap-20">
+                    <div class="flex justify-end gap-20 space-x-2">
                         <button type="button"
-                            class="text-gray-900 bg-gradient-to-r from-pink-200 via-pink-300 to-cyan-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-3xl text-sm px-5 py-2.5 inline-flex items-center">
+                            class="inline-flex items-center bg-gradient-to-r hover:bg-gradient-to-bl from-pink-200 via-pink-300 to-cyan-200 px-5 py-2.5 rounded-3xl focus:ring-4 focus:ring-red-100 dark:focus:ring-red-400 font-medium text-gray-900 focus:outline-none text-sm">
                             <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                 fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd"
@@ -211,16 +201,6 @@
                                     clip-rule="evenodd" />
                             </svg>
                             Go to repo
-                        </button>
-                        <button type="button"
-                            class="text-gray-900 bg-gradient-to-r from-pink-200 via-pink-300 to-cyan-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-3xl text-sm px-5 py-2.5 inline-flex items-center">
-                            More...
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="w-4 h-4 ml-2">
-                                <!-- Cambia w-6 h-6 a w-4 h-4 -->
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                            </svg>
                         </button>
                     </div>
                 </div>
@@ -237,9 +217,9 @@
                         voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                         cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
-                    <div class="flex justify-center space-x-2 gap-20">
+                    <div class="flex justify-center gap-20 space-x-2">
                         <button type="button"
-                            class="text-gray-900 bg-gradient-to-r from-pink-200 via-pink-300 to-cyan-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-3xl text-sm px-5 py-2.5 inline-flex items-center">
+                            class="inline-flex items-center bg-gradient-to-r hover:bg-gradient-to-bl from-pink-200 via-pink-300 to-cyan-200 px-5 py-2.5 rounded-3xl focus:ring-4 focus:ring-red-100 dark:focus:ring-red-400 font-medium text-gray-900 focus:outline-none text-sm">
                             <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                 fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd"
@@ -247,16 +227,6 @@
                                     clip-rule="evenodd" />
                             </svg>
                             Go to repo
-                        </button>
-                        <button type="button"
-                            class="text-gray-900 bg-gradient-to-r from-pink-200 via-pink-300 to-cyan-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-3xl text-sm px-5 py-2.5 inline-flex items-center">
-                            More...
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="w-4 h-4 ml-2">
-                                <!-- Cambia w-6 h-6 a w-4 h-4 -->
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                            </svg>
                         </button>
                     </div>
                 </div>
@@ -271,9 +241,9 @@
                         voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                         cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
-                    <div class="flex justify-center space-x-2 gap-20">
+                    <div class="flex justify-center gap-20 space-x-2">
                         <button type="button"
-                            class="text-gray-900 bg-gradient-to-r from-pink-200 via-pink-300 to-cyan-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-3xl text-sm px-5 py-2.5 inline-flex items-center">
+                            class="inline-flex items-center bg-gradient-to-r hover:bg-gradient-to-bl from-pink-200 via-pink-300 to-cyan-200 px-5 py-2.5 rounded-3xl focus:ring-4 focus:ring-red-100 dark:focus:ring-red-400 font-medium text-gray-900 focus:outline-none text-sm">
                             <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                 fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd"
@@ -281,16 +251,6 @@
                                     clip-rule="evenodd" />
                             </svg>
                             Go to repo
-                        </button>
-                        <button type="button"
-                            class="text-gray-900 bg-gradient-to-r from-pink-200 via-pink-300 to-cyan-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-3xl text-sm px-5 py-2.5 inline-flex items-center">
-                            More...
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="w-4 h-4 ml-2">
-                                <!-- Cambia w-6 h-6 a w-4 h-4 -->
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                            </svg>
                         </button>
                     </div>
                 </div>
@@ -300,17 +260,59 @@
 
         <!-- SKILLS & CONTACT ME -->
         <section id="skills" class="gap-4 grid grid-cols-2 mb-8 border border-black">
-            <div class="text-2xl text-bold text-center">
-                <h2>Skills</h2>
-            </div>
-            <div class="text-2xl text-bold text-center row-span-2">
-                <h2>GitHub</h2>
-            </div>
-            <div class="text-2xl text-bold text-center">
-                <h2>Contact me</h2>
+            <!-- Skills Section -->
+            <div class="flex flex-col items-center col-span-1 h-full">
+                <div
+                    class="p-6 border border-blue-600 rounded-xl max-w-lg transform transition duration-175 hover:scale-105 w-full h-full">
+                    <h3 class="mb-4 font-bold text-3xl text-center">Skills</h3>
+                    <div class="gap-4 grid grid-cols-2 p-2 text-center">
+                        <p
+                            class="p-2 border border-blue-600 rounded-3xl transform transition duration-175 hover:scale-105">
+                            JavaScript</p>
+                        <p
+                            class="p-2 border border-blue-600 rounded-3xl transform transition duration-175 hover:scale-105">
+                            Node.js</p>
+                        <p
+                            class="p-2 border border-blue-600 rounded-3xl transform transition duration-175 hover:scale-105">
+                            Docker</p>
+                        <p
+                            class="p-2 border border-blue-600 rounded-3xl transform transition duration-175 hover:scale-105">
+                            React</p>
+                        <p
+                            class="p-2 border border-blue-600 rounded-3xl transform transition duration-175 hover:scale-105">
+                            Python</p>
+                        <p
+                            class="p-2 border border-blue-600 rounded-3xl transform transition duration-175 hover:scale-105">
+                            AWS</p>
+                    </div>
+                </div>
             </div>
 
+            <!-- GitHub Section -->
+            <div class="flex flex-col items-center col-span-1 row-span-2 h-full">
+                <div
+                    class="p-6 border border-blue-600 rounded-xl max-w-lg text-center transform transition duration-175 hover:scale-105 w-full h-full">
+                    <h3 class="mb-4 font-bold text-2xl">GitHub</h3>
+                    <p class="">Aquí puedes ver mis proyectos y contribuciones en GitHub.</p>
+                    <div class="bg-blue-200 mt-4 rounded-lg w-full h-48">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="flex flex-col items-center col-span-1 h-full">
+                <div
+                    class="p-6 border border-blue-600 rounded-xl max-w-lg text-center transform transition duration-175 hover:scale-105 w-full h-full">
+                    <h3 class="font-bold text-2xl">Contacto</h3>
+                    <p class="mt-2">¿Interesado en trabajar juntos? ¡Contáctame!</p>
+                    <button
+                        class="transform transition duration-175 hover:scale-105 bg-sky-500 hover:bg-sky-600 m-6 p-3 border rounded-3xl">
+                        Enviar email
+                    </button>
+                </div>
+            </div>
         </section>
+
 
 
     </main>

@@ -1,0 +1,56 @@
+<div
+    class="top-5 left-5 z-50 fixed bg-gray-800 hover:bg-gray-900 px-3 py-2 rounded-full cursor-pointer"
+    onclick="toggleMenu()"
+>
+    &#9776; <!-- Icono del menú -->
+</div>
+
+<nav
+    id="sidebar"
+    class="top-5 left-8 z-40 fixed gap-2 grid grid-cols-4 bg-gray-800 shadow-lg py-2 rounded-full w-0 transition-all duration-500 overflow-x-hidden ease-in-out"
+>
+    <div class="block text-lg">
+        <a
+            href="#aboutme"
+            class="flex flex-col items-center text-[#ffa3dc] hover:text-[#ff8ad2]"
+        >
+            <img class="size-6" src="../../img/aboutme.png" />
+        </a>
+    </div>
+    <div class="block text-lg">
+        <a
+            href="#projects"
+            class="flex flex-col items-center text-[#ffa3dc] hover:text-[#ff8ad2]"
+        >
+            <img class="size-6" src="../../img/projects.png" />
+        </a>
+    </div>
+    <div class="block text-lg">
+        <a
+            href="#skills"
+            class="flex flex-col items-center text-[#ffa3dc] hover:text-[#ff8ad2]"
+        >
+            <img class="size-6" src="../../img/skills.png" />
+        </a>
+    </div>
+    <div class="block text-lg">
+        <a
+            href="#contactme"
+            class="flex flex-col items-center text-[#ffa3dc] hover:text-[#ff8ad2]"
+        >
+            <img class="size-6" src="../../img/contact.png" />
+        </a>
+    </div>
+</nav>
+
+<script is:inline>
+    // Define the function in the global scope
+    window.toggleMenu = function () {
+        const sidebar = document.getElementById("sidebar");
+        if (sidebar.style.width === "350px") {
+            sidebar.style.width = "0";
+        } else {
+            sidebar.style.width = "350px";
+        }
+    };
+</script>
