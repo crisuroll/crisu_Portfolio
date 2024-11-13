@@ -1,0 +1,31 @@
+---
+// ScrollFade.astro
+---
+
+<div class="opacity-0 transition-opacity duration-700 ease-in scroll-fade">
+    <slot />
+</div>
+
+<script>
+    // Set up the Intersection Observer
+    const observerCallback: IntersectionObserverCallback = (entries) => {
+        entries.forEach((entry) => {
+            // Only handle the fade-in, no fade-out
+            if (entry.isIntersecting) {
+                entry.target.classList.remove("opacity-0");
+                entry.target.classList.add("opacity-100");
+                // Once the element is visible, stop observing it
+                observer.unobserve(entry.target);
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, {
+        threshold: 0.5, // Trigger when at least 10% of the element is visible
+    });
+
+    // Observe all elements with the scroll-fade class
+    document.querySelectorAll(".scroll-fade").forEach((element) => {
+        observer.observe(element);
+    });
+</script>

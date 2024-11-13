@@ -1,5 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Repo from "../components/Repo.astro";
+import ScrollFade from "../components/ScrollFade.astro";
 ---
 
 <html lang="en">
@@ -10,23 +12,13 @@ import Layout from "../layouts/Layout.astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>crisu | Portfolio</title>
 		<link rel="icon" type="image/x-icon" href="../../img/favicon.ico" />
-
-		<!-- <script is:inline>
-			function toggleMenu() {
-				const sidebar = document.getElementById("sidebar");
-				if (sidebar.style.width === "350px") {
-					sidebar.style.width = "0";
-				} else {
-					sidebar.style.width = "350px";
-				}
-			}
-		</script> -->
+		<link rel="stylesheet" href="./src/style.css" />
 
 		<style>
 			/* FONTS (../../fonts/) */
 			@font-face {
-				font-family: CrystalUniverse;
-				src: url(../../fonts/crystal_universe/CrystalUniverse-Oblique.otf);
+				font-family: Arco;
+				src: url(../../fonts/arco/ARCO for OSX.otf);
 			}
 
 			@font-face {
@@ -35,392 +27,509 @@ import Layout from "../layouts/Layout.astro";
 			}
 
 			@font-face {
-				font-family: SuperCreamy;
-				src: url(../../fonts/super_creamy/Super\ Creamy\ Personal\ Use.ttf);
-			}
-
-			body {
-				background: url(../../img/wallpaper.jpg) no-repeat fixed;
-				background-size: cover;
+				font-family: Nunito;
+				src: url(../../fonts/Nunito/Nunito-VariableFont_wght.ttf);
 			}
 		</style>
 	</head>
 
 	<body
-		class="mx-auto px-4 py-8 border border-black font-[SuperCreamy] container"
+		class="bg-[url('../../img/wallpaper.jpg')] bg-cover bg-no-repeat mx-auto px-4 py-8 font-[Nunito] container"
 	>
 		<!-- HEADER -->
-		<header class="flex justify-center">
-			<!-- Botón del menú -->
-			<!-- <div
-				class="top-5 left-5 z-50 fixed bg-gray-800 hover:bg-gray-900 px-3 py-2 rounded-full cursor-pointer"
-				onclick="toggleMenu()"
-			>
-				&#9776;  Icono del menú -->
-			<!-- </div> -->
-
+		<header class="flex justify-center p-20">
 			<Layout />
-
-			<!-- Barra lateral -->
-			<!-- <nav
-				id="sidebar"
-				class="top-5 left-8 z-40 fixed gap-2 grid grid-cols-4 bg-gray-800 shadow-lg py-2 rounded-full w-0 transition-all duration-500 overflow-x-hidden ease-in-out"
+			<h1
+				class="font-['Arco'] text-3xl text-bold text-center text-pink-500"
 			>
-				<div class="block text-lg">
-					<a
-						href="#aboutme"
-						class="flex flex-col items-center text-[#ffa3dc] hover:text-[#ff8ad2]"
-					>
-						<img class="size-6" src="../../img/aboutme.png" />
-					</a>
-				</div>
-				<div class="block text-lg">
-					<a
-						href="#projects"
-						class="flex flex-col items-center text-[#ffa3dc] hover:text-[#ff8ad2]"
-					>
-						<img class="size-6" src="../../img/projects.png" />
-					</a>
-				</div>
-				<div class="block text-lg">
-					<a
-						href="#skills"
-						class="flex flex-col items-center text-[#ffa3dc] hover:text-[#ff8ad2]"
-					>
-						<img class="size-6" src="../../img/skills.png" />
-					</a>
-				</div>
-				<div class="block text-lg">
-					<a
-						href="#contactme"
-						class="flex flex-col items-center text-[#ffa3dc] hover:text-[#ff8ad2]"
-					>
-						<img class="size-6" src="../../img/contact.png" />
-					</a>
-				</div>
-			</nav> -->
-
-			<!-- TOGGLE LIGHT/DARK -->
+				Welcome!
+			</h1>
 		</header>
 
 		<!-- MAIN -->
 		<main>
 			<!-- ABOUT ME: FLIPCARD (MÓVIL), DESLIZANTE(MD Y MÁS) -->
-
-			<section
-				id="aboutme"
-				class="flex justify-center items-center mt-20 mb-8 py-4 border border-black"
-			>
-				<div
-					class="relative w-72 h-96 md:hover:-translate-x-56 duration-1000 md:duration-700 group [perspective:1000px]"
+			<ScrollFade>
+				<section
+					id="aboutme"
+					class="flex justify-center items-center m-8 py-4"
 				>
 					<div
-						class="relative z-20 bg-[linear-gradient(transparent_80%,_#000),_var(--i)] bg-cover bg-center shadow-lg rounded-2xl w-full h-full [transform-style:preserve-3d] md:group-hover:[transform:rotateY(0deg)] group-hover:[transform:rotateY(180deg)] transition-all duration-500"
+						class="relative w-72 h-96 md:hover:-translate-x-56 duration-1000 md:duration-700 group [perspective:1000px]"
 					>
-						<!-- DIV IMAGEN -->
-						<div class="absolute inset-0">
-							<img
-								class="shadow-black/40 shadow-xl rounded-xl w-full h-full object-cover"
-								src="../../img/img.jpg"
-							/>
-							<h4
-								class="bottom-10 left-6 absolute text-[#7e3462] text-xl"
-							>
-								Crisuroll
-							</h4>
-							<h4
-								class="bottom-10 left-44 absolute md:hidden text-[#7e3462] text-lg"
-							>
-								Click here!
-							</h4>
-						</div>
-
-						<!-- DIV TEXTO -->
 						<div
-							class="md:group-hover:w-[150%] top-0 right-0 bottom-0 left-0 z-30 md:-z-20 absolute inset-0 [backface-visibility:hidden] bg-white shadow-lg m-auto px-12 p-4 rounded-2xl md:rounded-l-none w-full md:w-[90%] h-full md:h-[90%] text-center text-slate-200 [transform:rotateY(180deg)] md:[transform:rotateY(0deg)] md:group-hover:translate-x-72 md:duration-700"
+							class="relative z-20 bg-[linear-gradient(transparent_80%,_#000),_var(--i)] bg-cover bg-center shadow-lg rounded-2xl w-full h-full [transform-style:preserve-3d] md:group-hover:[transform:rotateY(0deg)] group-hover:[transform:rotateY(180deg)] transition-all duration-500"
 						>
-							<div class="p-1 border-b-[#ffa3dc]">
-								<p class="font-bold text-[#ffa3dc] text-xl">
-									Crisu
-								</p>
-								<div class="flex gap-2">
-									<div class="flex items-center gap-1">
-										<p>Software developer</p>
+							<!-- DIV IMAGEN -->
+							<div class="absolute inset-0">
+								<img
+									class="shadow-black/40 shadow-xl rounded-xl w-full h-full object-cover"
+									src="../../img/img.jpg"
+								/>
+								<h4
+									class="bottom-10 left-6 absolute text-[#7e3462] text-xl"
+								>
+									Crisuroll
+								</h4>
+								<h4
+									class="bottom-10 left-44 absolute md:hidden text-[#7e3462] text-lg"
+								>
+									Click here!
+								</h4>
+							</div>
+
+							<!-- DIV TEXTO -->
+							<div
+								class="md:group-hover:w-[150%] top-0 right-0 bottom-0 left-0 z-30 md:-z-20 absolute inset-0 [backface-visibility:hidden] bg-white shadow-lg m-auto px-12 p-4 rounded-2xl md:rounded-l-none w-full md:w-[90%] h-full md:h-[90%] text-center [transform:rotateY(180deg)] md:[transform:rotateY(0deg)] md:group-hover:translate-x-72 md:duration-700"
+							>
+								<div class="p-1 border-b-[#ffa3dc]">
+									<p class="font-bold text-[#ffa3dc] text-xl">
+										Crisu
+									</p>
+									<div class="flex gap-2">
+										<div class="flex items-center gap-1">
+											<p>Software developer</p>
+										</div>
 									</div>
 								</div>
-							</div>
 
-							<div class="mt-4">
-								<p class="font-bold text-[#ffa3dc] text-xl">
-									Aquí meter una descripción mía
-								</p>
-							</div>
+								<div class="mt-4">
+									<p class="font-bold text-[#ffa3dc] text-xl">
+										Aquí meter una descripción mía
+									</p>
+								</div>
 
-							<div>
-								<a
-									href="#"
-									class="block bg-[#ffa3dc] mt-2 p-2 w-24 text-center text-white"
-									>Let's get started!</a
-								>
+								<div class="flex items-center gap-4">
+									<a
+										href="https://www.linkedin.com/in/crisu/"
+										target="_blank"
+									>
+										<svg
+											width="40px"
+											height="40px"
+											viewBox="0 0 48 48"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<circle
+												cx="24"
+												cy="24"
+												r="20"
+												fill="#0077B5"></circle>
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M18.7747 14.2839C18.7747 15.529 17.8267 16.5366 16.3442 16.5366C14.9194 16.5366 13.9713 15.529 14.0007 14.2839C13.9713 12.9783 14.9193 12 16.3726 12C17.8267 12 18.7463 12.9783 18.7747 14.2839ZM14.1199 32.8191V18.3162H18.6271V32.8181H14.1199V32.8191Z"
+												fill="white"></path>
+											<path
+												fill-rule="evenodd"
+												clip-rule="evenodd"
+												d="M22.2393 22.9446C22.2393 21.1357 22.1797 19.5935 22.1201 18.3182H26.0351L26.2432 20.305H26.3322C26.9254 19.3854 28.4079 17.9927 30.8101 17.9927C33.7752 17.9927 35.9995 19.9502 35.9995 24.219V32.821H31.4922V24.7838C31.4922 22.9144 30.8404 21.6399 29.2093 21.6399C27.9633 21.6399 27.2224 22.4999 26.9263 23.3297C26.8071 23.6268 26.7484 24.0412 26.7484 24.4574V32.821H22.2411V22.9446H22.2393Z"
+												fill="white"></path>
+										</svg>
+									</a>
+									<a
+										href="https://discord.com/users/363326056306049027"
+										target="_blank"
+									>
+										<svg
+											width="40px"
+											height="40px"
+											viewBox="0 0 32 32"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M2 11.6C2 8.23969 2 6.55953 2.65396 5.27606C3.2292 4.14708 4.14708 3.2292 5.27606 2.65396C6.55953 2 8.23969 2 11.6 2H20.4C23.7603 2 25.4405 2 26.7239 2.65396C27.8529 3.2292 28.7708 4.14708 29.346 5.27606C30 6.55953 30 8.23969 30 11.6V20.4C30 23.7603 30 25.4405 29.346 26.7239C28.7708 27.8529 27.8529 28.7708 26.7239 29.346C25.4405 30 23.7603 30 20.4 30H11.6C8.23969 30 6.55953 30 5.27606 29.346C4.14708 28.7708 3.2292 27.8529 2.65396 26.7239C2 25.4405 2 23.7603 2 20.4V11.6Z"
+												fill="white"></path>
+											<path
+												d="M23.6361 9.33998C22.212 8.71399 20.6892 8.25903 19.0973 8C18.9018 8.33209 18.6734 8.77875 18.5159 9.13408C16.8236 8.89498 15.1469 8.89498 13.4857 9.13408C13.3283 8.77875 13.0946 8.33209 12.8974 8C11.3037 8.25903 9.77927 8.71565 8.35518 9.3433C5.48276 13.4213 4.70409 17.3981 5.09342 21.3184C6.99856 22.6551 8.84487 23.467 10.66 23.9983C11.1082 23.4189 11.5079 22.8029 11.8523 22.1536C11.1964 21.9195 10.5683 21.6306 9.9748 21.2951C10.1323 21.1856 10.2863 21.071 10.4351 20.9531C14.0551 22.5438 17.9881 22.5438 21.5649 20.9531C21.7154 21.071 21.8694 21.1856 22.0251 21.2951C21.4299 21.6322 20.8 21.9211 20.1442 22.1553C20.4885 22.8029 20.8865 23.4205 21.3364 24C23.1533 23.4687 25.0013 22.6567 26.9065 21.3184C27.3633 16.7738 26.1261 12.8335 23.6361 9.33998ZM12.3454 18.9075C11.2587 18.9075 10.3676 17.9543 10.3676 16.7937C10.3676 15.6331 11.2397 14.6783 12.3454 14.6783C13.4511 14.6783 14.3422 15.6314 14.3232 16.7937C14.325 17.9543 13.4511 18.9075 12.3454 18.9075ZM19.6545 18.9075C18.5678 18.9075 17.6767 17.9543 17.6767 16.7937C17.6767 15.6331 18.5488 14.6783 19.6545 14.6783C20.7602 14.6783 21.6514 15.6314 21.6323 16.7937C21.6323 17.9543 20.7602 18.9075 19.6545 18.9075Z"
+												fill="#5865F2"></path>
+										</svg>
+									</a>
+									<a
+										href="mailto:cristina.cg9@hotmail.com"
+										target="_blank"
+									>
+										<svg
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke-width="1.5"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											aria-hidden="true"
+											class="w-10 h-10"
+										>
+											<path
+												d="M2.75 7.75a3 3 0 0 1 3-3h12.5a3 3 0 0 1 3 3v8.5a3 3 0 0 1-3 3H5.75a3 3 0 0 1-3-3v-8.5Z"
+												class="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
+											></path>
+											<path
+												d="m4 6 6.024 5.479a2.915 2.915 0 0 0 3.952 0L20 6"
+												class="stroke-zinc-400 dark:stroke-zinc-500"
+											></path>
+										</svg>
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			</section>
+				</section>
+			</ScrollFade>
 
 			<!-- FIN ABOUT ME -->
 
 			<!-- PROJECTS -->
 
-			<section id="projects" class="mb-8 py-4 border border-black">
-				<h1 class="text-2xl text-bold text-center">Projects</h1>
-				<div class="gap-4 grid grid-cols-1 md:grid-cols-2 px-20">
-					<!-- VIRTUAL MACHINE -->
-					<div class="border border-black">
-						<h1>Virtual Machine</h1>
-						<img
-							src="../../img/vm.jpg"
-							class="float-left size-32"
-						/>
-						<p class="">
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit, sed do eiusmod tempor incididunt ut labore et
-							dolore magna aliqua. Ut enim ad minim veniam, quis
-							nostrud exercitation ullamco laboris nisi ut aliquip
-							ex ea commodo consequat. Duis aute irure dolor in
-							reprehenderit in voluptate velit esse cillum dolore
-							eu fugiat nulla pariatur. Excepteur sint occaecat
-							cupidatat non proident, sunt in culpa qui officia
-							deserunt mollit anim id est laborum.
-						</p>
-						<div class="flex justify-center gap-20 space-x-2">
-							<button
-								type="button"
-								class="inline-flex items-center bg-gradient-to-r hover:bg-gradient-to-bl from-pink-200 via-pink-300 to-cyan-200 px-5 py-2.5 rounded-3xl focus:ring-4 focus:ring-red-100 dark:focus:ring-red-400 font-medium text-gray-900 focus:outline-none text-sm"
-							>
-								<svg
-									class="w-4 h-4 me-2"
-									aria-hidden="true"
-									xmlns="http://www.w3.org/2000/svg"
-									fill="currentColor"
-									viewBox="0 0 20 20"
-								>
-									<path
-										fill-rule="evenodd"
-										d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
-										clip-rule="evenodd"></path>
-								</svg>
-								Go to repo
-							</button>
+			<ScrollFade>
+				<section id="projects" class="mb-8 py-4">
+					<h1 class="p-6 font-[Arco] text-2xl text-bold text-center">
+						Projects
+					</h1>
+					<div
+						class="gap-4 grid grid-cols-1 md:grid-cols-2 md:px-20 py-6"
+					>
+						<!-- VIRTUAL MACHINE -->
+						<div class="bg-[#FEEAFA] dark:bg-[#CBC0D3] p-6 card">
+							<h1 class="font-[Starborn]">Virtual Machine</h1>
+							<img
+								src="../../img/vm.png"
+								class="float-left size-32"
+							/>
+							<p class="">
+								Este proyecto simula una pequeña máquina virtual
+								(VM) que contiene una serie de comandos
+								utilizados para crear dentro de la propia VM un
+								metaprograma.
+							</p>
+							<Repo
+								href="https://github.com/crisuroll/crisu_VirtualMachine"
+							/>
+						</div>
+						<!-- SIMON SAYS -->
+						<div class="bg-[#FEEAFA] dark:bg-[#CBC0D3] p-6 card">
+							<h1 class="font-[Starborn]">Simon Says</h1>
+							<img
+								src="../../img/simon.png"
+								class="float-left size-32"
+							/>
+							<p class="">
+								"Simón Dice" es un juego que consiste en seguir
+								una secuencia de colores y sonidos generada por
+								una máquina, incrementando la dificultad
+								conforme avanza el juego. Este proyecto se basa
+								en dicho juego, pero programado en Java y listo
+								para jugar en la consola de cualquier ordenador.
+							</p>
+							<Repo
+								href="https://github.com/crisuroll/crisu_SimonSays"
+							/>
+						</div>
+						<!-- MEMORY -->
+						<div class="bg-[#FEEAFA] dark:bg-[#CBC0D3] p-6 card">
+							<h1 class="font-[Starborn]">Memory</h1>
+							<img
+								src="../../img/memory.png"
+								class="float-left size-32"
+							/>
+							<p class="">
+								The memory game, also known as the pair search
+								game, is a classic card-based matching game that
+								exercises memory and concentration. In this
+								game, a set of cards (usually placed face down)
+								contains pairs of images, symbols, numbers, or
+								other graphics. The objective is to find and
+								match all pairs by remembering the location of
+								each card after it's been revealed.
+							</p>
+							<Repo
+								href="https://github.com/crisuroll/crisu_Memory"
+							/>
+						</div>
+						<!-- ROCK, PAPER, SCISSORS -->
+						<div class="bg-[#FEEAFA] dark:bg-[#CBC0D3] p-6 card">
+							<h1 class="font-[Starborn]">
+								Rock, Paper, Scissors
+							</h1>
+							<img
+								src="../../img/rps.png"
+								class="float-left size-32"
+							/>
+							<p class="">
+								The classic game of Rock, Paper, Scissors is a
+								strategy game that involves players choosing and
+								betting on the outcome of a series of rounds.
+								The game is played with two players, each of
+								whom has the option to choose rock, paper, or
+								scissors.
+							</p>
+							<Repo
+								href="https://github.com/crisuroll/crisu_RockPaperScissors"
+							/>
 						</div>
 					</div>
-					<!-- SIMON SAYS -->
-					<div class="border border-black">
-						<h1>Simon Says</h1>
-						<img
-							src="../../img/vm.jpg"
-							class="float-left size-32"
-						/>
-						<p class="">
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit, sed do eiusmod tempor incididunt ut labore et
-							dolore magna aliqua. Ut enim ad minim veniam, quis
-							nostrud exercitation ullamco laboris nisi ut aliquip
-							ex ea commodo consequat. Duis aute irure dolor in
-							reprehenderit in voluptate velit esse cillum dolore
-							eu fugiat nulla pariatur. Excepteur sint occaecat
-							cupidatat non proident, sunt in culpa qui officia
-							deserunt mollit anim id est laborum.
-						</p>
-						<div class="flex justify-end gap-20 space-x-2">
-							<button
-								type="button"
-								class="inline-flex items-center bg-gradient-to-r hover:bg-gradient-to-bl from-pink-200 via-pink-300 to-cyan-200 px-5 py-2.5 rounded-3xl focus:ring-4 focus:ring-red-100 dark:focus:ring-red-400 font-medium text-gray-900 focus:outline-none text-sm"
-							>
-								<svg
-									class="w-4 h-4 me-2"
-									aria-hidden="true"
-									xmlns="http://www.w3.org/2000/svg"
-									fill="currentColor"
-									viewBox="0 0 20 20"
-								>
-									<path
-										fill-rule="evenodd"
-										d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
-										clip-rule="evenodd"></path>
-								</svg>
-								Go to repo
-							</button>
-						</div>
-					</div>
-					<!-- MEMORY -->
-					<div class="border border-black">
-						<h1>Memory</h1>
-						<img
-							src="../../img/vm.jpg"
-							class="float-left size-32"
-						/>
-						<p class="">
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit, sed do eiusmod tempor incididunt ut labore et
-							dolore magna aliqua. Ut enim ad minim veniam, quis
-							nostrud exercitation ullamco laboris nisi ut aliquip
-							ex ea commodo consequat. Duis aute irure dolor in
-							reprehenderit in voluptate velit esse cillum dolore
-							eu fugiat nulla pariatur. Excepteur sint occaecat
-							cupidatat non proident, sunt in culpa qui officia
-							deserunt mollit anim id est laborum.
-						</p>
-						<div class="flex justify-center gap-20 space-x-2">
-							<button
-								type="button"
-								class="inline-flex items-center bg-gradient-to-r hover:bg-gradient-to-bl from-pink-200 via-pink-300 to-cyan-200 px-5 py-2.5 rounded-3xl focus:ring-4 focus:ring-red-100 dark:focus:ring-red-400 font-medium text-gray-900 focus:outline-none text-sm"
-							>
-								<svg
-									class="w-4 h-4 me-2"
-									aria-hidden="true"
-									xmlns="http://www.w3.org/2000/svg"
-									fill="currentColor"
-									viewBox="0 0 20 20"
-								>
-									<path
-										fill-rule="evenodd"
-										d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
-										clip-rule="evenodd"></path>
-								</svg>
-								Go to repo
-							</button>
-						</div>
-					</div>
-					<!-- API -->
-					<div class="border border-black">
-						<h1>API</h1>
-						<img
-							src="../../img/vm.jpg"
-							class="float-left size-32"
-						/>
-						<p class="">
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit, sed do eiusmod tempor incididunt ut labore et
-							dolore magna aliqua. Ut enim ad minim veniam, quis
-							nostrud exercitation ullamco laboris nisi ut aliquip
-							ex ea commodo consequat. Duis aute irure dolor in
-							reprehenderit in voluptate velit esse cillum dolore
-							eu fugiat nulla pariatur. Excepteur sint occaecat
-							cupidatat non proident, sunt in culpa qui officia
-							deserunt mollit anim id est laborum.
-						</p>
-						<div class="flex justify-center gap-20 space-x-2">
-							<button
-								type="button"
-								class="inline-flex items-center bg-gradient-to-r hover:bg-gradient-to-bl from-pink-200 via-pink-300 to-cyan-200 px-5 py-2.5 rounded-3xl focus:ring-4 focus:ring-red-100 dark:focus:ring-red-400 font-medium text-gray-900 focus:outline-none text-sm"
-							>
-								<svg
-									class="w-4 h-4 me-2"
-									aria-hidden="true"
-									xmlns="http://www.w3.org/2000/svg"
-									fill="currentColor"
-									viewBox="0 0 20 20"
-								>
-									<path
-										fill-rule="evenodd"
-										d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
-										clip-rule="evenodd"></path>
-								</svg>
-								Go to repo
-							</button>
-						</div>
-					</div>
-				</div>
-			</section>
+				</section>
+			</ScrollFade>
 			<!--FIN PROJECTS -->
 
 			<!-- SKILLS & CONTACT ME -->
-			<section
-				id="skills"
-				class="gap-4 grid grid-cols-2 mb-8 border border-black"
-			>
-				<!-- Skills Section -->
-				<div class="flex flex-col items-center col-span-1 h-full">
-					<div
-						class="p-6 border border-blue-600 rounded-xl max-w-lg transform transition duration-175 hover:scale-105 w-full h-full"
-					>
-						<h3 class="mb-4 font-bold text-3xl text-center">
-							Skills
-						</h3>
-						<div class="gap-4 grid grid-cols-2 p-2 text-center">
-							<p
-								class="p-2 border border-blue-600 rounded-3xl transform transition duration-175 hover:scale-105"
-							>
-								JavaScript
-							</p>
-							<p
-								class="p-2 border border-blue-600 rounded-3xl transform transition duration-175 hover:scale-105"
-							>
-								Node.js
-							</p>
-							<p
-								class="p-2 border border-blue-600 rounded-3xl transform transition duration-175 hover:scale-105"
-							>
-								Docker
-							</p>
-							<p
-								class="p-2 border border-blue-600 rounded-3xl transform transition duration-175 hover:scale-105"
-							>
-								React
-							</p>
-							<p
-								class="p-2 border border-blue-600 rounded-3xl transform transition duration-175 hover:scale-105"
-							>
-								Python
-							</p>
-							<p
-								class="p-2 border border-blue-600 rounded-3xl transform transition duration-175 hover:scale-105"
-							>
-								AWS
-							</p>
-						</div>
-					</div>
-				</div>
-
-				<!-- GitHub Section -->
-				<div
-					class="flex flex-col items-center col-span-1 row-span-2 h-full"
+			<ScrollFade>
+				<section
+					id="skills"
+					class="gap-4 grid grid-cols-1 md:grid-cols-2 mb-8 p-6"
 				>
-					<div
-						class="p-6 border border-blue-600 rounded-xl max-w-lg text-center transform transition duration-175 hover:scale-105 w-full h-full"
-					>
-						<h3 class="mb-4 font-bold text-2xl">GitHub</h3>
-						<p class="">
-							Aquí puedes ver mis proyectos y contribuciones en
-							GitHub.
-						</p>
-						<div class="bg-blue-200 mt-4 rounded-lg w-full h-48">
+					<!-- Skills Section -->
+					<div class="flex flex-col items-center col-span-1 h-full">
+						<div
+							class="bg-[#FEEAFA] dark:bg-[#CBC0D3] p-6 w-full max-w-lg h-full card"
+						>
+							<h3
+								class="mb-4 font-[Starborn] font-bold text-3xl text-center"
+							>
+								Main skills
+							</h3>
+							<div
+								class="gap-4 grid md:grid-cols-2 p-2 text-center"
+							>
+								<p
+									class="border-purple-950 p-2 border rounded-3xl transform transition duration-175 hover:scale-105"
+								>
+									Java
+								</p>
+								<p
+									class="border-purple-950 p-2 border rounded-3xl transform transition duration-175 hover:scale-105"
+								>
+									Python
+								</p>
+								<p
+									class="border-purple-950 p-2 border rounded-3xl transform transition duration-175 hover:scale-105"
+								>
+									Docker
+								</p>
+								<p
+									class="border-purple-950 p-2 border rounded-3xl transform transition duration-175 hover:scale-105"
+								>
+									SQL
+								</p>
+								<p
+									class="border-purple-950 p-2 border rounded-3xl transform transition duration-175 hover:scale-105"
+								>
+									C#
+								</p>
+								<p
+									class="border-purple-950 p-2 border rounded-3xl transform transition duration-175 hover:scale-105"
+								>
+									Android
+								</p>
+							</div>
 						</div>
 					</div>
-				</div>
 
-				<!-- Contact Section -->
-				<div class="flex flex-col items-center col-span-1 h-full">
+					<!-- GitHub Section -->
 					<div
-						class="p-6 border border-blue-600 rounded-xl max-w-lg text-center transform transition duration-175 hover:scale-105 w-full h-full"
+						class="flex flex-col items-center col-span-1 row-span-2 h-full"
 					>
-						<h3 class="font-bold text-2xl">Contacto</h3>
-						<p class="mt-2">
-							¿Interesado en trabajar juntos? ¡Contáctame!
-						</p>
-						<button
-							class="transform transition duration-175 hover:scale-105 bg-sky-500 hover:bg-sky-600 m-6 p-3 border rounded-3xl"
+						<div
+							class="bg-[#FEEAFA] dark:bg-[#CBC0D3] p-6 rounded-xl w-full max-w-lg h-full text-center card"
 						>
-							Enviar email
-						</button>
+							<h3 class="mb-4 font-[Starborn] font-bold text-2xl">
+								GitHub
+							</h3>
+							<p class="">
+								Aquí puedes ver mis proyectos y contribuciones
+								en GitHub.
+							</p>
+							<div class="flex justify-center mt-4 w-full h-48">
+								<img
+									src="../../img/gitpfp.jpg"
+									class="rounded-full size-40"
+								/>
+							</div>
+							<div class="flex justify-center items-center gap-2">
+								<svg
+									width="40px"
+									height="40px"
+									viewBox="0 0 24 24"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<title>github</title>
+									<rect width="24" height="24" fill="none"
+									></rect>
+									<path
+										d="M12,2A10,10,0,0,0,8.84,21.5c.5.08.66-.23.66-.5V19.31C6.73,19.91,6.14,18,6.14,18A2.69,2.69,0,0,0,5,16.5c-.91-.62.07-.6.07-.6a2.1,2.1,0,0,1,1.53,1,2.15,2.15,0,0,0,2.91.83,2.16,2.16,0,0,1,.63-1.34C8,16.17,5.62,15.31,5.62,11.5a3.87,3.87,0,0,1,1-2.71,3.58,3.58,0,0,1,.1-2.64s.84-.27,2.75,1a9.63,9.63,0,0,1,5,0c1.91-1.29,2.75-1,2.75-1a3.58,3.58,0,0,1,.1,2.64,3.87,3.87,0,0,1,1,2.71c0,3.82-2.34,4.66-4.57,4.91a2.39,2.39,0,0,1,.69,1.85V21c0,.27.16.59.67.5A10,10,0,0,0,12,2Z"
+									></path>
+								</svg>
+								<a
+									href="https://github.com/crisuroll"
+									target="_blank"
+									class="m-0">✨crisu (@crisuroll)</a
+								>
+							</div>
+						</div>
 					</div>
-				</div>
-			</section>
-		</main>
 
-		<footer class="mb-8 border border-black">
-			<h1>AQUI VA EL FOOTER</h1>
-		</footer>
+					<!-- Contact Section -->
+
+					<div class="flex flex-col items-center col-span-1 h-full">
+						<form
+							id="subscriptionForm"
+							class="bg-[#FEEAFA] dark:bg-[#CBC0D3] p-6 rounded-xl w-full max-w-lg h-full text-center card"
+						>
+							<h2
+								class="flex font-semibold text-sm text-zinc-900 dark:text-zinc-100"
+							>
+								<svg
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke-width="1.5"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									aria-hidden="true"
+									class="flex-none w-6 h-6"
+								>
+									<path
+										d="M2.75 7.75a3 3 0 0 1 3-3h12.5a3 3 0 0 1 3 3v8.5a3 3 0 0 1-3 3H5.75a3 3 0 0 1-3-3v-8.5Z"
+										class="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
+									></path>
+									<path
+										d="m4 6 6.024 5.479a2.915 2.915 0 0 0 3.952 0L20 6"
+										class="stroke-zinc-400 dark:stroke-zinc-500"
+									></path>
+								</svg>
+								<span class="ml-3">Wanna know more?</span>
+							</h2>
+							<p
+								class="mt-2 text-sm text-zinc-600 dark:text-zinc-400"
+							>
+								Leave your mail to stay in touch.
+							</p>
+							<div class="flex mt-6">
+								<input
+									type="email"
+									placeholder="Email address"
+									aria-label="Email address"
+									required
+									id="emailInput"
+									class="flex-auto border-zinc-900/10 dark:border-zinc-700 bg-white dark:bg-zinc-700/[0.15] shadow-md shadow-zinc-800/5 px-3 py-[calc(theme(spacing.2)-1px)] border focus:border-teal-500 dark:focus:border-teal-400 rounded-md focus:ring-4 focus:ring-teal-500/10 dark:focus:ring-teal-400/10 min-w-0 dark:placeholder:text-zinc-500 placeholder:text-zinc-400 sm:text-sm dark:text-zinc-200 appearance-none focus:outline-none"
+								/>
+								<button
+									type="submit"
+									id="submitButton"
+									class="inline-flex flex-none justify-center items-center gap-2 bg-zinc-800 hover:bg-zinc-700 dark:hover:bg-zinc-600 active:bg-zinc-800 dark:active:bg-zinc-700 dark:bg-zinc-700 ml-4 px-3 py-2 rounded-md font-semibold text-sm text-zinc-100 active:text-zinc-100/70 dark:active:text-zinc-100/70 transition active:transition-none outline-offset-2"
+								>
+									Send
+								</button>
+							</div>
+							<div
+								id="successMessage"
+								class="hidden mt-2 text-green-500 text-sm"
+							>
+								Thanks for subscribing! You'll hear from us
+								soon.
+							</div>
+							<div
+								id="errorMessage"
+								class="hidden mt-2 text-red-500 text-sm"
+							>
+							</div>
+						</form>
+					</div>
+				</section>
+			</ScrollFade>
+
+			<script>
+				const form = document.getElementById(
+					"subscriptionForm",
+				) as HTMLFormElement;
+				const emailInput = document.getElementById(
+					"emailInput",
+				) as HTMLInputElement;
+				const submitButton = document.getElementById(
+					"submitButton",
+				) as HTMLButtonElement;
+				const errorMessage = document.getElementById(
+					"errorMessage",
+				) as HTMLDivElement;
+				const successMessage = document.getElementById(
+					"successMessage",
+				) as HTMLDivElement;
+
+				form.addEventListener("submit", async (e) => {
+					e.preventDefault();
+
+					// Reset state
+					errorMessage.classList.add("hidden");
+					successMessage.classList.add("hidden");
+					submitButton.disabled = true;
+					submitButton.textContent = "Sending...";
+
+					try {
+						const response = await fetch("/api/subscribe", {
+							method: "POST",
+							headers: {
+								"Content-Type": "application/json",
+							},
+							body: JSON.stringify({
+								email: emailInput.value,
+							}),
+						});
+
+						const data = await response.json();
+
+						if (!response.ok) {
+							throw new Error(
+								data.message || "Subscription failed",
+							);
+						}
+
+						// Show success message
+						successMessage.classList.remove("hidden");
+						form.reset();
+					} catch (err) {
+						errorMessage.textContent =
+							err instanceof Error
+								? err.message
+								: "Something went wrong. Please try again.";
+						errorMessage.classList.remove("hidden");
+					} finally {
+						submitButton.disabled = false;
+						submitButton.textContent = "Send";
+					}
+				});
+			</script>
+		</main>
 	</body>
+
+	<footer class="pt-20 pb-10">
+		<div class="md:flex md:flex-row justify-between items-center">
+			<div
+				class="flex flex-wrap gap-x-5 gap-y-1 mb-4 md:mb-0 font-medium text-sm text-zinc-800 dark:text-zinc-200"
+			>
+				<a
+					class="hover:text-pink-400 dark:hover:text-pink-400"
+					href="#aboutme">About me</a
+				>
+				<a
+					class="hover:text-pink-400 dark:hover:text-pink-400"
+					href="#projects">Projects</a
+				>
+				<a
+					class="hover:text-pink-400 dark:hover:text-pink-400"
+					href="#skills">Skills</a
+				>
+				<a
+					class="hover:text-pink-600 dark:hover:text-pink-400"
+					href="#contactme">Contact me</a
+				>
+				<a
+					class="hover:text-pink-400 dark:hover:text-pink-400"
+					href="https://github.com/crisuroll"
+					target="_blank">GitHub</a
+				>
+			</div>
+			<p class="m-0 text-sm text-zinc-400 dark:text-zinc-500">
+				©2024 Crisu. All rights reserved.
+			</p>
+		</div>
+	</footer>
 </html>
