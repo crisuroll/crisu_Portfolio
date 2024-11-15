@@ -34,13 +34,13 @@ import ScrollFade from "../components/ScrollFade.astro";
 	</head>
 
 	<body
-		class="bg-[url('../../img/wallpaper.jpg')] bg-cover bg-no-repeat mx-auto px-4 py-8 font-[Nunito] container"
+		class="bg-[url('../../img/wallpaper.jpg')] dark:bg-[url('../../img/darkwallpaper.jpg')] bg-cover bg-no-repeat mx-auto px-4 py-8 font-[Nunito] container"
 	>
 		<!-- HEADER -->
-		<header class="flex justify-center p-20">
+		<header class="flex justify-center p-16">
 			<Layout />
 			<h1
-				class="font-['Arco'] text-3xl text-bold text-center text-pink-500"
+				class="font-['Arco'] text-[#D1B3C4] text-6xl text-bold text-center"
 			>
 				Welcome!
 			</h1>
@@ -52,7 +52,7 @@ import ScrollFade from "../components/ScrollFade.astro";
 			<ScrollFade>
 				<section
 					id="aboutme"
-					class="flex justify-center items-center m-8 py-4"
+					class="flex justify-center items-center m-8"
 				>
 					<div
 						class="relative w-72 h-96 md:hover:-translate-x-56 duration-1000 md:duration-700 group [perspective:1000px]"
@@ -64,15 +64,15 @@ import ScrollFade from "../components/ScrollFade.astro";
 							<div class="absolute inset-0">
 								<img
 									class="shadow-black/40 shadow-xl rounded-xl w-full h-full object-cover"
-									src="../../img/img.jpg"
+									src="../../img/img2.jpg"
 								/>
 								<h4
-									class="bottom-10 left-6 absolute text-[#7e3462] text-xl"
+									class="bottom-10 left-6 absolute font-[Arco] text-[#B392AC] text-xl"
 								>
 									Crisuroll
 								</h4>
 								<h4
-									class="bottom-10 left-44 absolute md:hidden text-[#7e3462] text-lg"
+									class="bottom-10 left-44 absolute md:hidden font-[Arco] text-[#B392AC] text-lg"
 								>
 									Click here!
 								</h4>
@@ -80,26 +80,26 @@ import ScrollFade from "../components/ScrollFade.astro";
 
 							<!-- DIV TEXTO -->
 							<div
-								class="md:group-hover:w-[150%] top-0 right-0 bottom-0 left-0 z-30 md:-z-20 absolute inset-0 [backface-visibility:hidden] bg-white shadow-lg m-auto px-12 p-4 rounded-2xl md:rounded-l-none w-full md:w-[90%] h-full md:h-[90%] text-center [transform:rotateY(180deg)] md:[transform:rotateY(0deg)] md:group-hover:translate-x-72 md:duration-700"
+								class="md:group-hover:w-[150%] top-0 right-0 bottom-0 left-0 z-30 md:-z-20 absolute inset-0 [backface-visibility:hidden] bg-[#ffe7e4] shadow-lg m-auto px-12 p-4 rounded-2xl md:rounded-l-none w-full md:w-[90%] h-full md:h-[90%] [transform:rotateY(180deg)] md:[transform:rotateY(0deg)] md:group-hover:translate-x-72 md:duration-700"
 							>
 								<div class="p-1 border-b-[#ffa3dc]">
-									<p class="font-bold text-[#ffa3dc] text-xl">
+									<p class="font-[Starborn] font-bold text-[#D1B3C4] text-xl">
 										Crisu
 									</p>
-									<div class="flex gap-2">
+									<div class="flex gap-2 pt-2">
 										<div class="flex items-center gap-1">
-											<p>Software developer</p>
+											<p class="font-bold text-[#B392AC] text-left text-lg">Network and computer administrator. Software and web developer.</p>
 										</div>
 									</div>
 								</div>
 
 								<div class="mt-4">
-									<p class="font-bold text-[#ffa3dc] text-xl">
-										Aquí meter una descripción mía
+									<p class="p-1 font-bold text-[#E8C2CA] text-justify">
+										Spanish junior dev. I love programming and web designing.
 									</p>
 								</div>
 
-								<div class="flex items-center gap-4">
+								<div class="flex items-center gap-4 pt-4 pl-2">
 									<a
 										href="https://www.linkedin.com/in/crisu/"
 										target="_blank"
@@ -141,7 +141,7 @@ import ScrollFade from "../components/ScrollFade.astro";
 										>
 											<path
 												d="M2 11.6C2 8.23969 2 6.55953 2.65396 5.27606C3.2292 4.14708 4.14708 3.2292 5.27606 2.65396C6.55953 2 8.23969 2 11.6 2H20.4C23.7603 2 25.4405 2 26.7239 2.65396C27.8529 3.2292 28.7708 4.14708 29.346 5.27606C30 6.55953 30 8.23969 30 11.6V20.4C30 23.7603 30 25.4405 29.346 26.7239C28.7708 27.8529 27.8529 28.7708 26.7239 29.346C25.4405 30 23.7603 30 20.4 30H11.6C8.23969 30 6.55953 30 5.27606 29.346C4.14708 28.7708 3.2292 27.8529 2.65396 26.7239C2 25.4405 2 23.7603 2 20.4V11.6Z"
-												fill="white"></path>
+												></path>
 											<path
 												d="M23.6361 9.33998C22.212 8.71399 20.6892 8.25903 19.0973 8C18.9018 8.33209 18.6734 8.77875 18.5159 9.13408C16.8236 8.89498 15.1469 8.89498 13.4857 9.13408C13.3283 8.77875 13.0946 8.33209 12.8974 8C11.3037 8.25903 9.77927 8.71565 8.35518 9.3433C5.48276 13.4213 4.70409 17.3981 5.09342 21.3184C6.99856 22.6551 8.84487 23.467 10.66 23.9983C11.1082 23.4189 11.5079 22.8029 11.8523 22.1536C11.1964 21.9195 10.5683 21.6306 9.9748 21.2951C10.1323 21.1856 10.2863 21.071 10.4351 20.9531C14.0551 22.5438 17.9881 22.5438 21.5649 20.9531C21.7154 21.071 21.8694 21.1856 22.0251 21.2951C21.4299 21.6322 20.8 21.9211 20.1442 22.1553C20.4885 22.8029 20.8865 23.4205 21.3364 24C23.1533 23.4687 25.0013 22.6567 26.9065 21.3184C27.3633 16.7738 26.1261 12.8335 23.6361 9.33998ZM12.3454 18.9075C11.2587 18.9075 10.3676 17.9543 10.3676 16.7937C10.3676 15.6331 11.2397 14.6783 12.3454 14.6783C13.4511 14.6783 14.3422 15.6314 14.3232 16.7937C14.325 17.9543 13.4511 18.9075 12.3454 18.9075ZM19.6545 18.9075C18.5678 18.9075 17.6767 17.9543 17.6767 16.7937C17.6767 15.6331 18.5488 14.6783 19.6545 14.6783C20.7602 14.6783 21.6514 15.6314 21.6323 16.7937C21.6323 17.9543 20.7602 18.9075 19.6545 18.9075Z"
 												fill="#5865F2"></path>
@@ -183,56 +183,48 @@ import ScrollFade from "../components/ScrollFade.astro";
 
 			<ScrollFade>
 				<section id="projects" class="mb-8 py-4">
-					<h1 class="p-6 font-[Arco] text-2xl text-bold text-center">
+					<h1 class="p-6 font-[Arco] text-[#D1B3C4] text-4xl text-bold text-center">
 						Projects
 					</h1>
 					<div
 						class="gap-4 grid grid-cols-1 md:grid-cols-2 md:px-20 py-6"
 					>
 						<!-- VIRTUAL MACHINE -->
-						<div class="bg-[#FEEAFA] dark:bg-[#CBC0D3] p-6 card">
-							<h1 class="font-[Starborn]">Virtual Machine</h1>
+						<div class="bg-[#fef2f9] dark:bg-[#CBC0D3] p-6 card">
+							<h1 class="font-[Starborn] text-[#D1B3C4] text-xl">Virtual Machine</h1>
 							<img
 								src="../../img/vm.png"
-								class="float-left size-32"
+								class="float-left p-2 size-32"
 							/>
-							<p class="">
-								Este proyecto simula una pequeña máquina virtual
-								(VM) que contiene una serie de comandos
-								utilizados para crear dentro de la propia VM un
-								metaprograma.
+							<p class="p-2 pb-10 text-[#d2afb6] text-justify">
+								This project simulates a small virtual machine (VM) containing a series of commands used to create within the VM itself a metaprogram. The application will be able to execute a series of commands entered by the user to create, modify and execute programs, where a program is a list of instances of our instructions.
 							</p>
 							<Repo
 								href="https://github.com/crisuroll/crisu_VirtualMachine"
 							/>
 						</div>
 						<!-- SIMON SAYS -->
-						<div class="bg-[#FEEAFA] dark:bg-[#CBC0D3] p-6 card">
-							<h1 class="font-[Starborn]">Simon Says</h1>
+						<div class="bg-[#fef2f9] dark:bg-[#CBC0D3] p-6 card">
+							<h1 class="font-[Starborn] text-[#D1B3C4] text-xl">Simon Says</h1>
 							<img
 								src="../../img/simon.png"
-								class="float-left size-32"
+								class="float-left p-2 size-32"
 							/>
-							<p class="">
-								"Simón Dice" es un juego que consiste en seguir
-								una secuencia de colores y sonidos generada por
-								una máquina, incrementando la dificultad
-								conforme avanza el juego. Este proyecto se basa
-								en dicho juego, pero programado en Java y listo
-								para jugar en la consola de cualquier ordenador.
+							<p class="p-2 pb-10 text-[#d2afb6] text-justify">
+								“Simon Says” is a game that consists of following a sequence of colors and sounds generated by a machine, increasing the difficulty as the game progresses. This project is based on that game, but programmed in Java and ready to play on any computer.
 							</p>
 							<Repo
 								href="https://github.com/crisuroll/crisu_SimonSays"
 							/>
 						</div>
 						<!-- MEMORY -->
-						<div class="bg-[#FEEAFA] dark:bg-[#CBC0D3] p-6 card">
-							<h1 class="font-[Starborn]">Memory</h1>
+						<div class="bg-[#fef2f9] dark:bg-[#CBC0D3] p-6 card">
+							<h1 class="font-[Starborn] text-[#D1B3C4] text-xl">Memory</h1>
 							<img
 								src="../../img/memory.png"
-								class="float-left size-32"
+								class="float-left p-2 size-32"
 							/>
-							<p class="">
+							<p class="p-2 pb-10 text-[#d2afb6] text-justify">
 								The memory game, also known as the pair search
 								game, is a classic card-based matching game that
 								exercises memory and concentration. In this
@@ -247,15 +239,15 @@ import ScrollFade from "../components/ScrollFade.astro";
 							/>
 						</div>
 						<!-- ROCK, PAPER, SCISSORS -->
-						<div class="bg-[#FEEAFA] dark:bg-[#CBC0D3] p-6 card">
-							<h1 class="font-[Starborn]">
+						<div class="bg-[#fef2f9] dark:bg-[#CBC0D3] p-6 card">
+							<h1 class="font-[Starborn] text-[#D1B3C4] text-xl">
 								Rock, Paper, Scissors
 							</h1>
 							<img
 								src="../../img/rps.png"
-								class="float-left size-32"
+								class="float-left p-2 size-32"
 							/>
-							<p class="">
+							<p class="p-2 pb-10 text-[#d2afb6] text-justify">
 								The classic game of Rock, Paper, Scissors is a
 								strategy game that involves players choosing and
 								betting on the outcome of a series of rounds.
@@ -276,48 +268,48 @@ import ScrollFade from "../components/ScrollFade.astro";
 			<ScrollFade>
 				<section
 					id="skills"
-					class="gap-4 grid grid-cols-1 md:grid-cols-2 mb-8 p-6"
+					class="gap-4 grid grid-cols-1 md:grid-cols-2 mb-8 px-20 py-6"
 				>
 					<!-- Skills Section -->
 					<div class="flex flex-col items-center col-span-1 h-full">
 						<div
-							class="bg-[#FEEAFA] dark:bg-[#CBC0D3] p-6 w-full max-w-lg h-full card"
+							class="bg-[#fef2f9] dark:bg-[#CBC0D3] p-6 w-full h-full card"
 						>
 							<h3
-								class="mb-4 font-[Starborn] font-bold text-3xl text-center"
+								class="mb-4 font-[Starborn] font-bold text-[#D1B3C4] text-3xl text-center"
 							>
 								Main skills
 							</h3>
 							<div
-								class="gap-4 grid md:grid-cols-2 p-2 text-center"
+								class="gap-4 grid md:grid-cols-2 p-2 text-[#d2afb6] text-center"
 							>
 								<p
-									class="border-purple-950 p-2 border rounded-3xl transform transition duration-175 hover:scale-105"
+									class="border-[#d2afb6] hover:border-[#fef2f9] hover:bg-[#d2afb6] p-2 border rounded-3xl hover:text-[#fef2f9] transform transition duration-175 hover:scale-105"
 								>
 									Java
 								</p>
 								<p
-									class="border-purple-950 p-2 border rounded-3xl transform transition duration-175 hover:scale-105"
+									class="border-[#d2afb6] hover:border-[#fef2f9] hover:bg-[#d2afb6] p-2 border rounded-3xl hover:text-[#fef2f9] transform transition duration-175 hover:scale-105"
 								>
 									Python
 								</p>
 								<p
-									class="border-purple-950 p-2 border rounded-3xl transform transition duration-175 hover:scale-105"
+									class="border-[#d2afb6] hover:border-[#fef2f9] hover:bg-[#d2afb6] p-2 border rounded-3xl hover:text-[#fef2f9] transform transition duration-175 hover:scale-105"
 								>
 									Docker
 								</p>
 								<p
-									class="border-purple-950 p-2 border rounded-3xl transform transition duration-175 hover:scale-105"
+									class="border-[#d2afb6] hover:border-[#fef2f9] hover:bg-[#d2afb6] p-2 border rounded-3xl hover:text-[#fef2f9] transform transition duration-175 hover:scale-105"
 								>
 									SQL
 								</p>
 								<p
-									class="border-purple-950 p-2 border rounded-3xl transform transition duration-175 hover:scale-105"
+									class="border-[#d2afb6] hover:border-[#fef2f9] hover:bg-[#d2afb6] p-2 border rounded-3xl hover:text-[#fef2f9] transform transition duration-175 hover:scale-105"
 								>
 									C#
 								</p>
 								<p
-									class="border-purple-950 p-2 border rounded-3xl transform transition duration-175 hover:scale-105"
+									class="border-[#d2afb6] hover:border-[#fef2f9] hover:bg-[#d2afb6] p-2 border rounded-3xl hover:text-[#fef2f9] transform transition duration-175 hover:scale-105"
 								>
 									Android
 								</p>
@@ -330,12 +322,12 @@ import ScrollFade from "../components/ScrollFade.astro";
 						class="flex flex-col items-center col-span-1 row-span-2 h-full"
 					>
 						<div
-							class="bg-[#FEEAFA] dark:bg-[#CBC0D3] p-6 rounded-xl w-full max-w-lg h-full text-center card"
+							class="bg-[#fef2f9] dark:bg-[#CBC0D3] p-6 rounded-xl w-full h-full text-center card"
 						>
-							<h3 class="mb-4 font-[Starborn] font-bold text-2xl">
+							<h3 class="mb-4 font-[Starborn] font-bold text-[#D1B3C4] text-3xl">
 								GitHub
 							</h3>
-							<p class="">
+							<p class="text-[#d2afb6]">
 								Aquí puedes ver mis proyectos y contribuciones
 								en GitHub.
 							</p>
@@ -346,12 +338,16 @@ import ScrollFade from "../components/ScrollFade.astro";
 								/>
 							</div>
 							<div class="flex justify-center items-center gap-2">
+								<a href="https://github.com/crisuroll"
+								target="_blank">
 								<svg
 									width="40px"
 									height="40px"
 									viewBox="0 0 24 24"
 									xmlns="http://www.w3.org/2000/svg"
+
 								>
+								
 									<title>github</title>
 									<rect width="24" height="24" fill="none"
 									></rect>
@@ -359,10 +355,11 @@ import ScrollFade from "../components/ScrollFade.astro";
 										d="M12,2A10,10,0,0,0,8.84,21.5c.5.08.66-.23.66-.5V19.31C6.73,19.91,6.14,18,6.14,18A2.69,2.69,0,0,0,5,16.5c-.91-.62.07-.6.07-.6a2.1,2.1,0,0,1,1.53,1,2.15,2.15,0,0,0,2.91.83,2.16,2.16,0,0,1,.63-1.34C8,16.17,5.62,15.31,5.62,11.5a3.87,3.87,0,0,1,1-2.71,3.58,3.58,0,0,1,.1-2.64s.84-.27,2.75,1a9.63,9.63,0,0,1,5,0c1.91-1.29,2.75-1,2.75-1a3.58,3.58,0,0,1,.1,2.64,3.87,3.87,0,0,1,1,2.71c0,3.82-2.34,4.66-4.57,4.91a2.39,2.39,0,0,1,.69,1.85V21c0,.27.16.59.67.5A10,10,0,0,0,12,2Z"
 									></path>
 								</svg>
+								</a>
 								<a
 									href="https://github.com/crisuroll"
 									target="_blank"
-									class="m-0">✨crisu (@crisuroll)</a
+									class="m-0 text-[#B392AC]">✨crisu (@crisuroll)</a
 								>
 							</div>
 						</div>
@@ -373,7 +370,7 @@ import ScrollFade from "../components/ScrollFade.astro";
 					<div class="flex flex-col items-center col-span-1 h-full">
 						<form
 							id="subscriptionForm"
-							class="bg-[#FEEAFA] dark:bg-[#CBC0D3] p-6 rounded-xl w-full max-w-lg h-full text-center card"
+							class="bg-[#fef2f9] dark:bg-[#CBC0D3] p-6 rounded-xl w-full h-full text-center card"
 						>
 							<h2
 								class="flex font-semibold text-sm text-zinc-900 dark:text-zinc-100"
@@ -385,7 +382,7 @@ import ScrollFade from "../components/ScrollFade.astro";
 									stroke-linecap="round"
 									stroke-linejoin="round"
 									aria-hidden="true"
-									class="flex-none w-6 h-6"
+									class="flex-none w-8 h-8"
 								>
 									<path
 										d="M2.75 7.75a3 3 0 0 1 3-3h12.5a3 3 0 0 1 3 3v8.5a3 3 0 0 1-3 3H5.75a3 3 0 0 1-3-3v-8.5Z"
@@ -396,10 +393,10 @@ import ScrollFade from "../components/ScrollFade.astro";
 										class="stroke-zinc-400 dark:stroke-zinc-500"
 									></path>
 								</svg>
-								<span class="ml-3">Wanna know more?</span>
+								<span class="ml-3 font-[Starborn] font-bold text-[#D1B3C4] text-3xl">Wanna know more?</span>
 							</h2>
 							<p
-								class="mt-2 text-sm text-zinc-600 dark:text-zinc-400"
+								class="mt-2 text-[#d2afb6] text-sm"
 							>
 								Leave your mail to stay in touch.
 							</p>
@@ -415,7 +412,7 @@ import ScrollFade from "../components/ScrollFade.astro";
 								<button
 									type="submit"
 									id="submitButton"
-									class="inline-flex flex-none justify-center items-center gap-2 bg-zinc-800 hover:bg-zinc-700 dark:hover:bg-zinc-600 active:bg-zinc-800 dark:active:bg-zinc-700 dark:bg-zinc-700 ml-4 px-3 py-2 rounded-md font-semibold text-sm text-zinc-100 active:text-zinc-100/70 dark:active:text-zinc-100/70 transition active:transition-none outline-offset-2"
+									class="inline-flex flex-none justify-center items-center gap-2 bg-[#D1B3C4] hover:bg-[#B392AC] dark:hover:bg-zinc-600 active:bg-[#D1B3C4] dark:active:bg-zinc-700 dark:bg-zinc-700 ml-4 px-3 py-2 rounded-md font-semibold text-[#B392AC] text-sm hover:text-[#D1B3C4] active:text-[#B392AC] dark:active:text-zinc-100/70 transition active:transition-none outline-offset-2"
 								>
 									Send
 								</button>
@@ -500,34 +497,34 @@ import ScrollFade from "../components/ScrollFade.astro";
 		</main>
 	</body>
 
-	<footer class="pt-20 pb-10">
-		<div class="md:flex md:flex-row justify-between items-center">
+	<footer class="p-20">
+		<div class="md:flex md:flex-row justify-between items-center text-[#D1B3C4]">
 			<div
-				class="flex flex-wrap gap-x-5 gap-y-1 mb-4 md:mb-0 font-medium text-sm text-zinc-800 dark:text-zinc-200"
+				class="flex flex-wrap gap-x-5 gap-y-1 mb-4 md:mb-0 font-bold text-sm"
 			>
 				<a
-					class="hover:text-pink-400 dark:hover:text-pink-400"
+					class="hover:text-[#735D78] dark:hover:text-[#735D78]"
 					href="#aboutme">About me</a
 				>
 				<a
-					class="hover:text-pink-400 dark:hover:text-pink-400"
+					class="hover:text-[#735D78] dark:hover:text-[#735D78]"
 					href="#projects">Projects</a
 				>
 				<a
-					class="hover:text-pink-400 dark:hover:text-pink-400"
+					class="hover:text-[#735D78] dark:hover:text-[#735D78]"
 					href="#skills">Skills</a
 				>
 				<a
-					class="hover:text-pink-600 dark:hover:text-pink-400"
+					class="hover:text-[#735D78] dark:hover:text-[#735D78]"
 					href="#contactme">Contact me</a
 				>
 				<a
-					class="hover:text-pink-400 dark:hover:text-pink-400"
+					class="hover:text-[#735D78] dark:hover:text-[#735D78]"
 					href="https://github.com/crisuroll"
 					target="_blank">GitHub</a
 				>
 			</div>
-			<p class="m-0 text-sm text-zinc-400 dark:text-zinc-500">
+			<p class="m-0 text-sm">
 				©2024 Crisu. All rights reserved.
 			</p>
 		</div>
