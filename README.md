@@ -1,6 +1,6 @@
-# 🚀 crisu Portfolio
+# 🐹 crisu Portfolio
 
-## 📝 Overview
+## 👀 Overview
 
 Welcome to my personal portfolio! This project showcases my professional journey, skills, and notable projects. Designed to provide a comprehensive view of my capabilities and experience, this portfolio website serves as a digital representation of my professional identity.
 
