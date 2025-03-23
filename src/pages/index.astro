@@ -26,7 +26,7 @@ import ScrollFade from "../components/ScrollFade.astro";
 							class="group relative w-72 h-96 md:hover:-translate-x-56 duration-1000 md:duration-700 [perspective:1000px]"
 						>
 							<div
-								class="relative z-20 bg-[linear-gradient(transparent_80%,_#000),_var(--i)] bg-cover bg-center shadow-lg rounded-2xl w-full h-full [transform-style:preserve-3d] md:group-hover:[transform:rotateY(0deg)] group-hover:[transform:rotateY(180deg)] transition-all duration-500"
+								class="relative z-20 bg-[linear-gradient(transparent_80%,_#000),_var(--i)] bg-cover bg-center shadow-lg rounded-2xl w-full h-full transition-all duration-500 [transform-style:preserve-3d] md:group-hover:[transform:rotateY(0deg)] group-hover:[transform:rotateY(180deg)]"
 							>
 								<!-- DIV IMAGEN -->
 								<div class="absolute inset-0">
@@ -54,7 +54,7 @@ import ScrollFade from "../components/ScrollFade.astro";
 
 								<!-- DIV TEXTO -->
 								<div
-									class="md:group-hover:w-[150%] top-0 right-0 bottom-0 left-0 z-30 md:-z-20 absolute inset-0 [backface-visibility:hidden] bg-[#fef2f9] dark:bg-[#5E548E] shadow-lg m-auto px-12 p-4 rounded-2xl md:rounded-l-none w-full md:w-[90%] h-full md:h-[90%] [transform:rotateY(180deg)] md:[transform:rotateY(0deg)] md:group-hover:translate-x-72 md:duration-700"
+									class="top-0 right-0 bottom-0 left-0 z-30 md:-z-20 absolute inset-0 bg-[#fef2f9] dark:bg-[#5E548E] shadow-lg m-auto px-12 p-4 rounded-2xl md:rounded-l-none w-full md:group-hover:w-[150%] md:w-[90%] h-full md:h-[90%] md:group-hover:translate-x-72 md:duration-700 [backface-visibility:hidden] [transform:rotateY(180deg)] md:[transform:rotateY(0deg)]"
 								>
 									<div class="p-1">
 										<p
@@ -321,34 +321,34 @@ import ScrollFade from "../components/ScrollFade.astro";
 									class="gap-4 grid md:grid-cols-2 p-2 text-[#d2afb6] text-center dark:text-[#231942]"
 								>
 									<p
-										class="border-[#d2afb6] hover:border-[#fef2f9] dark:border-[#231942] hover:bg-[#d2afb6] dark:hover:bg-[#231942] p-2 border rounded-3xl dark:hover:text-[#635377] hover:text-[#fef2f9] transform transition duration-175 hover:scale-105"
+										class="hover:bg-[#d2afb6] dark:hover:bg-[#231942] p-2 border border-[#d2afb6] hover:border-[#fef2f9] dark:border-[#231942] rounded-3xl hover:text-[#fef2f9] dark:hover:text-[#635377] transform transition duration-175 hover:scale-105"
 									>
-										Java
+										Java + Android
 									</p>
 									<p
-										class="border-[#d2afb6] hover:border-[#fef2f9] dark:border-[#231942] hover:bg-[#d2afb6] dark:hover:bg-[#231942] p-2 border rounded-3xl hover:text-[#fef2f9] dark:hover:text-[#635377] transform transition duration-175 hover:scale-105"
+										class="hover:bg-[#d2afb6] dark:hover:bg-[#231942] p-2 border border-[#d2afb6] hover:border-[#fef2f9] dark:border-[#231942] rounded-3xl hover:text-[#fef2f9] dark:hover:text-[#635377] transform transition duration-175 hover:scale-105"
 									>
 										Python
 									</p>
 									<p
-										class="border-[#d2afb6] hover:border-[#fef2f9] dark:border-[#231942] hover:bg-[#d2afb6] dark:hover:bg-[#231942] p-2 border rounded-3xl hover:text-[#fef2f9] dark:hover:text-[#635377] transform transition duration-175 hover:scale-105"
+										class="hover:bg-[#d2afb6] dark:hover:bg-[#231942] p-2 border border-[#d2afb6] hover:border-[#fef2f9] dark:border-[#231942] rounded-3xl hover:text-[#fef2f9] dark:hover:text-[#635377] transform transition duration-175 hover:scale-105"
 									>
-										Docker
+										React Native
 									</p>
 									<p
-										class="border-[#d2afb6] hover:border-[#fef2f9] dark:border-[#231942] hover:bg-[#d2afb6] dark:hover:bg-[#231942] p-2 border rounded-3xl hover:text-[#fef2f9] dark:hover:text-[#635377] transform transition duration-175 hover:scale-105"
+										class="hover:bg-[#d2afb6] dark:hover:bg-[#231942] p-2 border border-[#d2afb6] hover:border-[#fef2f9] dark:border-[#231942] rounded-3xl hover:text-[#fef2f9] dark:hover:text-[#635377] transform transition duration-175 hover:scale-105"
 									>
 										SQL
 									</p>
 									<p
-										class="border-[#d2afb6] hover:border-[#fef2f9] dark:border-[#231942] hover:bg-[#d2afb6] dark:hover:bg-[#231942] p-2 border rounded-3xl hover:text-[#fef2f9] dark:hover:text-[#635377] transform transition duration-175 hover:scale-105"
+										class="hover:bg-[#d2afb6] dark:hover:bg-[#231942] p-2 border border-[#d2afb6] hover:border-[#fef2f9] dark:border-[#231942] rounded-3xl hover:text-[#fef2f9] dark:hover:text-[#635377] transform transition duration-175 hover:scale-105"
 									>
 										C#
 									</p>
 									<p
-										class="border-[#d2afb6] hover:border-[#fef2f9] dark:border-[#231942] hover:bg-[#d2afb6] dark:hover:bg-[#231942] p-2 border rounded-3xl hover:text-[#fef2f9] dark:hover:text-[#635377] transform transition duration-175 hover:scale-105"
+										class="hover:bg-[#d2afb6] dark:hover:bg-[#231942] p-2 border border-[#d2afb6] hover:border-[#fef2f9] dark:border-[#231942] rounded-3xl hover:text-[#fef2f9] dark:hover:text-[#635377] transform transition duration-175 hover:scale-105"
 									>
-										Android
+										Docker
 									</p>
 								</div>
 							</div>
@@ -457,12 +457,12 @@ import ScrollFade from "../components/ScrollFade.astro";
 										aria-label="Email address"
 										required
 										id="emailInput"
-										class="flex-auto border-zinc-900/10 dark:border-zinc-700 bg-white dark:bg-zinc-700/[0.15] shadow-md shadow-zinc-800/5 px-3 py-[calc(theme(spacing.2)-1px)] border focus:border-teal-500 dark:focus:border-teal-400 rounded-md focus:ring-4 focus:ring-teal-500/10 dark:focus:ring-teal-400/10 min-w-0 sm:text-sm dark:placeholder:text-zinc-500 dark:text-zinc-200 placeholder:text-zinc-400 appearance-none focus:outline-none"
+										class="flex-auto bg-white dark:bg-zinc-700/[0.15] shadow-md shadow-zinc-800/5 px-3 py-[calc(theme(spacing.2)-1px)] border border-zinc-900/10 dark:border-zinc-700 focus:border-teal-500 dark:focus:border-teal-400 rounded-md focus:ring-4 focus:ring-teal-500/10 dark:focus:ring-teal-400/10 min-w-0 sm:text-sm dark:placeholder:text-zinc-500 dark:text-zinc-200 placeholder:text-zinc-400 appearance-none focus:outline-none"
 									/>
 									<button
 										type="submit"
 										id="submitButton"
-										class="inline-flex flex-none justify-center items-center gap-2 bg-[#D1B3C4] hover:bg-[#B392AC] dark:hover:bg-zinc-600 active:bg-[#D1B3C4] dark:active:bg-zinc-700 dark:bg-zinc-700 ml-4 px-3 py-2 rounded-md font-semibold text-[#B392AC] text-sm hover:text-[#D1B3C4] active:text-[#B392AC] dark:active:text-zinc-100/70 transition active:transition-none outline-offset-2"
+										class="inline-flex flex-none justify-center items-center gap-2 bg-[#D1B3C4] hover:bg-[#B392AC] active:bg-[#D1B3C4] dark:bg-zinc-700 dark:hover:bg-zinc-600 dark:active:bg-zinc-700 ml-4 px-3 py-2 rounded-md font-semibold text-[#B392AC] text-sm hover:text-[#D1B3C4] active:text-[#B392AC] dark:active:text-zinc-100/70 transition active:transition-none outline-offset-2"
 									>
 										Send
 									</button>
