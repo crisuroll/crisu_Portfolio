@@ -15,23 +15,28 @@ Welcome to my personal portfolio! This project showcases my professional journey
 ## 🗂️ Sections Breakdown
 
 ### 1. About me
+
 - Card to know a little about me
 - Contact buttons with different social medias
 
 ### 2. Projects
-- A little overview of my projects, also uploaded on GitHub
-    - Virtual Machine
-    - Simon Says
-    - Memory
-    - Rock, Paper, Scissors
 
-### 3.  Main skills
+- A little overview of my projects, also uploaded on GitHub
+  - Virtual Machine
+  - Simon Says
+  - Memory
+  - Rock, Paper, Scissors
+
+### 3. Main skills
+
 - A section to show my main skills
 
 ### 4. GitHub
+
 - A section to show my GitHub profile
 
 ### 5. Contact
+
 - A form where you can contact me
 - **ON PROGRESS, API NOT WORKING**
 

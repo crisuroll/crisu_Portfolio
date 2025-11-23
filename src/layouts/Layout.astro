@@ -1,74 +1,39 @@
 ---
-import Navbar from "../components/Navbar.astro";
-import ThemeToggle from "../components/ThemeToggle.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <link rel="icon" type="image/x-icon" href="/crisu_Portfolio//img/favicon.ico" />
-        <link rel="stylesheet" href="/crisu_Portfolio//style.css" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+    <link rel="stylesheet" href="/src/styles.css" />
+    <title>crisu | Portfolio</title>
+    <style>
+      @font-face {
+        font-family: Arco;
+        src: url(../../fonts/arco/ARCO\ for\ OSX.otf);
+      }
 
-        <style>
-            /* FONTS (../../fonts/) */
-            @font-face {
-                font-family: Arco;
-                src: url(../../fonts/arco/ARCO for OSX.otf);
-            }
+      @font-face {
+        font-family: Starborn;
+        src: url(../../fonts/starborn/Starborn.otf);
+      }
 
-            @font-face {
-                font-family: Starborn;
-                src: url(../../fonts/starborn/Starborn.otf);
-            }
-
-            @font-face {
-                font-family: Nunito;
-                src: url(../../fonts/Nunito/Nunito-VariableFont_wght.ttf);
-            }
-        </style>
-    </head>
-    <body
-        class="bg-[url('/crisu_Portfolio//img/wallpaper.jpg')] dark:bg-[url('/crisu_Portfolio//img/darkwallpaper.jpg')] bg-cover bg-no-repeat mx-auto px-4 py-8 font-[Nunito] container"
-    >
-        <header id="aboutme" class="flex justify-center p-16">
-            <ThemeToggle />
-            <Navbar />
-        </header>
-        <slot />
-    </body>
-    <footer class="md:p-20">
-        <div
-            class="md:flex md:flex-row justify-between items-center font-bold dark-text-[#9F86C0] text-[#D1B3C4] dark:text-[#5E548E]"
-        >
-            <div
-                class="flex flex-wrap gap-x-5 gap-y-1 mb-4 md:mb-0 font-bold text-sm"
-            >
-                <a
-                    class="hover:text-[#735D78] dark:hover:text-[#31235c]"
-                    href="#aboutme">About me</a
-                >
-                <a
-                    class="hover:text-[#735D78] dark:hover:text-[#31235c]"
-                    href="#projects">Projects</a
-                >
-                <a
-                    class="hover:text-[#735D78] dark:hover:text-[#31235c]"
-                    href="#skills">Skills</a
-                >
-                <a
-                    class="hover:text-[#735D78] dark:hover:text-[#31235c]"
-                    href="#contactme">Contact me</a
-                >
-                <a
-                    class="hover:text-[#735D78] dark:hover:text-[#31235c]"
-                    href="https://github.com/crisuroll"
-                    target="_blank">GitHub</a
-                >
-            </div>
-            <p class="m-0 text-sm">©2024 Crisu. All rights reserved.</p>
-        </div>
-    </footer>
+      @font-face {
+        font-family: Nunito;
+        src: url(../../fonts/Nunito/Nunito-VariableFont_wght.ttf);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-[url('/img/wallpaper.jpg')] dark:bg-[url('/img/darkwallpaper.jpg')] bg-cover bg-no-repeat mx-auto px-4 py-8 font-[Nunito] container"
+  >
+    <Header />
+    <slot />
+    <Footer />
+  </body>
 </html>

@@ -2,6 +2,9 @@
 dist/
 # generated types
 .astro/
+.vscode/
+.github/
+.prettierrc
 
 # dependencies
 node_modules/
@@ -22,6 +25,3 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
-
-api.env
-PENDIENTE.txt

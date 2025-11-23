@@ -1,0 +1,26 @@
+---
+import ProjectButton from "./ProjectButton.astro";
+
+interface Props {
+  title: string;
+  image: string;
+  description: string;
+  slug: string;
+}
+
+const { title, image, description, slug } = Astro.props;
+---
+
+<div class="bg-[#fef2f9] dark:bg-[#5E548E] p-6 card">
+  <h1 class="font-[Starborn] text-[#D1B3C4] text-xl dark:text-[#9F86C0]">
+    {title}
+  </h1>
+
+  <img src={image} class="float-left p-2 size-32" />
+
+  <p class="p-2 pb-10 text-[#d2afb6] text-justify dark:text-[#E7C6E1]">
+    {description}
+  </p>
+
+  <ProjectButton slug={slug} />
+</div>
