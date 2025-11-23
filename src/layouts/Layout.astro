@@ -1,6 +1,8 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import "../styles/index.css";
+import "../styles/global.css";
 ---
 
 <!doctype html>
@@ -9,25 +11,8 @@ import Footer from "../components/Footer.astro";
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
-    <link rel="stylesheet" href="/src/styles.css" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <title>crisu | Portfolio</title>
-    <style>
-      @font-face {
-        font-family: Arco;
-        src: url(../../fonts/arco/ARCO\ for\ OSX.otf);
-      }
-
-      @font-face {
-        font-family: Starborn;
-        src: url(../../fonts/starborn/Starborn.otf);
-      }
-
-      @font-face {
-        font-family: Nunito;
-        src: url(../../fonts/Nunito/Nunito-VariableFont_wght.ttf);
-      }
-    </style>
   </head>
   <body
     class="bg-[url('/img/wallpaper.jpg')] dark:bg-[url('/img/darkwallpaper.jpg')] bg-cover bg-no-repeat mx-auto px-4 py-8 font-[Nunito] container"

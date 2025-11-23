@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+  font-family: Arco;
+  src: url(/fonts/arco/ARCO\ for\ OSX.otf);
+}
+
+@font-face {
+  font-family: Starborn;
+  src: url(/fonts/starborn/Starborn.otf);
+}
+
+@font-face {
+  font-family: Nunito;
+  src: url(/fonts/Nunito/Nunito-VariableFont_wght.ttf);
+}
